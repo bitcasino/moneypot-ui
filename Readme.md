@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/shamanu4/moneypot-ui.svg)](https://travis-ci.org/shamanu4/moneypot-ui)
 
+[![Code Climate](https://codeclimate.com/github/shamanu4/moneypot-ui/badges/gpa.svg)](https://codeclimate.com/github/shamanu4/moneypot-ui)
+
+[![Test Coverage](https://codeclimate.com/github/shamanu4/moneypot-ui/badges/coverage.svg)](https://codeclimate.com/github/shamanu4/moneypot-ui)
+
 # MoneyPot
 
 This folder is primarily a container for the top-level pieces of the application.
