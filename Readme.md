@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/shamanu4/moneypot-ui.svg)](https://travis-ci.org/shamanu4/moneypot-ui)
+
 # MoneyPot
 
 This folder is primarily a container for the top-level pieces of the application.
