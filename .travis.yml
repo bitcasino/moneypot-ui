@@ -13,7 +13,7 @@ before_script:
   - sencha diag show
   - sencha app build
   - sencha web -p 1841 start &
-  - sleep 3
+  - sleep 20
 
 script:
   - phantomjs app-test/phantom-jasmine.js http://localhost:1841/app-test/run-tests.html
