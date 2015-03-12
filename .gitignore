@@ -87,3 +87,6 @@ build/Release
 node_modules
 
 
+
+report
+app-test/lib/jscover-src

@@ -147,6 +147,11 @@ page.open(url, function(success) {
                     return 1;
                 }
             });
+
+            page.evaluate(function(){
+                jscoverage_report('phantom');
+            });
+
             phantom.exit(exitCode);
         };
 
