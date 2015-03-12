@@ -10,8 +10,8 @@ before_script:
   - tar -xzf sdk/cmd.tgz -C .
   - export PATH=`pwd`/cmd/:$PATH;
   - export SENCHA_CMD_3_0_0=`pwd`/cmd/
-  - sencha -d diag show;
-  - sencha -d app build;
+  - sencha diag show;
+  - sencha app build;
   - sencha web -p 1841 start &;
   - sleep 3;
 
