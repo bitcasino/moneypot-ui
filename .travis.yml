@@ -1,0 +1,27 @@
+language: JavaScript
+
+branches:
+  only:
+    - master
+
+before_script:
+  - echo `pwd`
+  - tar -xzf sdk/ext.tgz -C .
+  - tar -xzf sdk/cmd.tgz -C .
+  - export PATH=`pwd`/cmd/:$PATH;
+  - export SENCHA_CMD_3_0_0=`pwd`/cmd/
+  - sencha -d diag show;
+  - sencha -d app build;
+  - sencha web -p 1841 start &;
+  - sleep 3;
+
+script:
+  - phantomjs app-test/phantom-jasmine.js http://localhost:1841/app-test/run-tests.html
+
+after_script:
+  - sencha web -p 1841 stop
+
+notifications:
+  email:
+    recipients:
+      - shamanu4+travis.moneypot-ui@gmail.com
