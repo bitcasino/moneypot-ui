@@ -8,12 +8,12 @@ before_script:
   - echo `pwd`
   - tar -xzf sdk/ext.tgz -C .
   - tar -xzf sdk/cmd.tgz -C .
-  - export PATH=`pwd`/cmd/:$PATH;
+  - export PATH=`pwd`/cmd/:$PATH
   - export SENCHA_CMD_3_0_0=`pwd`/cmd/
-  - sencha diag show;
-  - sencha app build;
-  - sencha web -p 1841 start &;
-  - sleep 3;
+  - sencha diag show
+  - sencha app build
+  - sencha web -p 1841 start &
+  - sleep 3
 
 script:
   - phantomjs app-test/phantom-jasmine.js http://localhost:1841/app-test/run-tests.html
