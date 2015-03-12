@@ -15,7 +15,8 @@ before_script:
   - npm install codeclimate-test-reporter
 #  - sencha web -p 1841 start &
 #  - sleep 20
-  - java -jar app-test/lib/jscover/JSCover-all.jar -ws --document-root=. --report-dir=app-test/report --no-instrument=app-test --no-instrument=ext
+  - java -jar app-test/lib/jscover/JSCover-all.jar -ws --document-root=. --report-dir=app-test/report --no-instrument=app-test --no-instrument=ext &
+  - sleep 5
 
 script:
 #  - phantomjs app-test/phantom-jasmine.js http://localhost:1841/app-test/run-tests.html
