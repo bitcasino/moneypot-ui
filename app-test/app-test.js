@@ -3,6 +3,9 @@
  * Ext.application(). This is the ideal place to handle application launch and initialization
  * details.
  */
+
+/* global Ext */
+
 Ext.Loader.setPath('MoneyPot', '/app/');
 
 Ext.define('MoneyPotTest.Application', {

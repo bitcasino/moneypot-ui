@@ -4,6 +4,8 @@
  * details.
  */
 
+/* global Ext */
+
 Ext.Loader.setPath('MoneyPot', '/app/');
 
 Ext.define('MoneyPotTest.Application', {

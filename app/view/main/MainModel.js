@@ -1,17 +1,21 @@
-/**
- * This class is the view model for the Main view of the application.
- */
+(function () {
 
-/* global Ext */
+    "use strict";
+    /**
+     * This class is the view model for the Main view of the application.
+     */
 
-Ext.define('MoneyPot.view.main.MainModel', {
-    extend: 'Ext.app.ViewModel',
+    /* global Ext */
 
-    alias: 'viewmodel.main',
+    Ext.define('MoneyPot.view.main.MainModel', {
+        extend: 'Ext.app.ViewModel',
 
-    data: {
-        name: 'MoneyPot'
-    }
+        alias: 'viewmodel.main',
 
-    //TODO - add data, formulas and/or methods to support your view
-});
+        data: {
+            name: 'MoneyPot'
+        }
+
+        //TODO - add data, formulas and/or methods to support your view
+    });
+})();
