@@ -13,6 +13,7 @@ before_script:
   - sencha diag show
   - sencha app build
   - npm install codeclimate-test-reporter
+  - export PATH=`pwd`/node_modules/codeclimate-test-reporter/bin/:$PATH
 #  - sencha web -p 1841 start &
 #  - sleep 20
   - java -jar app-test/lib/jscover/JSCover-all.jar -ws --document-root=. --report-dir=app-test/report --no-instrument=app-test --no-instrument=ext &
@@ -24,7 +25,14 @@ script:
 
 after_script:
 #  - sencha web -p 1841 stop
-  - CODECLIMATE_REPO_TOKEN=30142ca7fcb05b657235b60124a37f8c896bab311e20361a20d2e745c760d6eb node_modules/codeclimate-test-reporter/bin/codeclimate.js < app-test/report/phantom/jscover.lcov
+  - java -cp app-test/lib/jscover/JSCover-all.jar jscover.report.Main --format=LCOV app-test/report/phantom/ app-test/report/phantom/original-src/
+  - cd app-test/report/phantom/original-src/
+  - codeclimate.js < ../jscover.lcov
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "gVfj6HKajImimelhrVCBRXeeSN793G6/PcFVSplUZ4rGjQj2wU488XT8ervxElWC8/qNURgLRBrxOt7NkjU3XMTxF+8+wXMPBhV5wYTC+EY1bMo695Bm6STM7rd1Pxic58OUzidUwbgvk/xbnGVE38U1w8R0A/38tbQbEZeZFnc="
 
 notifications:
   email:

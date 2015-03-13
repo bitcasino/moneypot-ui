@@ -3,6 +3,9 @@
  * Ext.application(). This is the ideal place to handle application launch and initialization
  * details.
  */
+
+/* global Ext */
+
 Ext.define('MoneyPot.Application', {
     extend: 'Ext.app.Application',
     

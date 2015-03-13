@@ -5,6 +5,9 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
+
+/* global Ext */
+
 Ext.define('MoneyPot.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
