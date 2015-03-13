@@ -10,10 +10,10 @@ before_script:
   - tar -xzf sdk/cmd.tgz -C .
   - export PATH=`pwd`/cmd/:$PATH
   - export SENCHA_CMD_3_0_0=`pwd`/cmd/
+  - npm install codeclimate-test-reporter
+  - export PATH=`pwd`/node_modules/.bin/:$PATH
   - sencha diag show
   - sencha app build
-  - npm install codeclimate-test-reporter
-  - export PATH=`pwd`/node_modules/codeclimate-test-reporter/bin/:$PATH
 #  - sencha web -p 1841 start &
 #  - sleep 20
   - java -jar app-test/lib/jscover/JSCover-all.jar -ws --document-root=. --report-dir=app-test/report --no-instrument=app-test --no-instrument=ext &
@@ -27,7 +27,7 @@ after_script:
 #  - sencha web -p 1841 stop
   - java -cp app-test/lib/jscover/JSCover-all.jar jscover.report.Main --format=LCOV app-test/report/phantom/ app-test/report/phantom/original-src/
   - cd app-test/report/phantom/original-src/
-  - codeclimate.js < ../jscover.lcov
+  - codeclimate < ../jscover.lcov
 
 addons:
   code_climate:
